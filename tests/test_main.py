@@ -91,9 +91,10 @@ def test_cross_ref_p99_docs_only() -> None:
 
 
 def test_no_crep_afet_gamma_bridge_symbols() -> None:
-    import river_gauge_shipping_utac as m
-    from pathlib import Path
     import re
+    from pathlib import Path
+
+    import river_gauge_shipping_utac as m
 
     public = " ".join(n for n in dir(m) if not n.startswith("_")).upper()
     assert "CREP" not in public
